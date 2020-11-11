@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cOUNTER PRELOADER</title>
+    <link rel="stylesheet" href="css/load.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">
+            0
+        </div>
+    </div>
+
+    <section>
+        <h2>
+            Welcome Back to all! <span>Stay tuned for More Video</span>
+        </h2>
+        <p>About
+            A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+            
+            Example
+            Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no margin by default, so use spacing utilities as needed.
+            
+            Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they’ll naturally fill the full width of its parent element. This is easily customized with our various sizing options.
+            
+            </p>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+    <script type="text/javascript">
+            function counter(){
+                var count = setInterval(function(){
+                    var c = parseInt($('.counter').text());
+                    $('.counter').text((++c).toString());
+                    if(c == 100){
+                        clearInterval(count);
+                        $('.counter').addClass('hide')
+                        $('.preloader').addClass('active')
+                    }
+                },60)
+            }
+            counter()
+    </script>
+</body>
+</html>
